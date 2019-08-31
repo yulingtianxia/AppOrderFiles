@@ -3,7 +3,7 @@ s.name         = "AppOrderFiles"
 s.version      = "0.0.1"
 s.summary      = "Generating order files for Mach-O using Clang."
 s.description  = <<-DESC
-Generating order files for Mach-O using Clang. Improving App Performance.
+The easiest way to generate order files for Mach-O using Clang. Improving App Performance.
 DESC
 s.homepage     = "https://github.com/yulingtianxia/AppOrderFiles"
 
