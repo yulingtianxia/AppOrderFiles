@@ -1,6 +1,22 @@
+
+[![Platform](https://img.shields.io/cocoapods/p/AppOrderFiles.svg?style=flat)](http://cocoapods.org/pods/AppOrderFiles)
+[![CI Status](http://img.shields.io/travis/yulingtianxia/AppOrderFiles.svg?style=flat)](https://travis-ci.org/yulingtianxia/AppOrderFiles)
+[![Version](https://img.shields.io/cocoapods/v/AppOrderFiles.svg?style=flat)](http://cocoapods.org/pods/AppOrderFiles)
+[![GitHub release](https://img.shields.io/github/release/yulingtianxia/AppOrderFiles.svg)](https://github.com/yulingtianxia/AppOrderFiles/releases)
+[![Twitter Follow](https://img.shields.io/twitter/follow/yulingtianxia.svg?style=social&label=Follow)](https://twitter.com/yulingtianxia)
+
 # AppOrderFiles
 
-The easiest way to generate order files for Mach-O using Clang SanitizerCoverage. Improving App Performance.
+The easiest way to generate order files for Mach-O using Clang SanitizerCoverage. Improving your App Performance.
+
+Enjoy it!!!
+
+## Feature
+
+- [x] Swift/Objective-C/C/C++ 
+- [x] All Methods and Functions
+- [x] All Blocks
+- [x] iOS/macOS/tvOS/watchOS
 
 ## Usage
 
@@ -60,3 +76,8 @@ post_install do |installer|
   end
 end
 ```
+
+## Reference
+
+- [Clang 10 documentation](https://clang.llvm.org/docs/SanitizerCoverage.html#tracing-pcs)
+- [Improving App Performance with Order Files](https://medium.com/@michael.eisel/improving-app-performance-with-order-files-c7fff549907f)
