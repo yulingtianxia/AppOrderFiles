@@ -10,7 +10,6 @@
 #import <dlfcn.h>
 #import <libkern/OSAtomicQueue.h>
 #import <pthread.h>
-#include <sanitizer/coverage_interface.h>
 
 static OSQueueHead queue = OS_ATOMIC_QUEUE_INIT;
 
