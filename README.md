@@ -1,6 +1,5 @@
 
 [![Platform](https://img.shields.io/cocoapods/p/AppOrderFiles.svg?style=flat)](http://cocoapods.org/pods/AppOrderFiles)
-[![CI Status](http://img.shields.io/travis/yulingtianxia/AppOrderFiles.svg?style=flat)](https://travis-ci.org/yulingtianxia/AppOrderFiles)
 [![Version](https://img.shields.io/cocoapods/v/AppOrderFiles.svg?style=flat)](http://cocoapods.org/pods/AppOrderFiles)
 [![GitHub release](https://img.shields.io/github/release/yulingtianxia/AppOrderFiles.svg)](https://github.com/yulingtianxia/AppOrderFiles/releases)
 [![Twitter Follow](https://img.shields.io/twitter/follow/yulingtianxia.svg?style=social&label=Follow)](https://twitter.com/yulingtianxia)
@@ -11,14 +10,18 @@ The easiest way to generate order files for Mach-O using Clang SanitizerCoverage
 
 Enjoy it!!!
 
-## Feature
+## 📚 Article
+
+- [App 二进制文件重排已经被玩坏了](http://yulingtianxia.com/blog/2019/09/01/App-Order-Files/)
+
+## 🌟 Feature
 
 - [x] Swift/Objective-C/C/C++ 
 - [x] All Methods and Functions
 - [x] All Blocks
 - [x] iOS/macOS/tvOS/watchOS
 
-## Usage
+## 🐒 Usage
 
 Just call `AppOrderFiles()`.
 
@@ -32,7 +35,7 @@ After generating "app.order" file, just move it to your project workspace, and f
 
 AppOrderFiles also print results in debug console.
 
-## Installation
+## 📲 Installation
 
 **NOTE**: In build settings of your Xcode project/target, add `-fsanitize-coverage=func,trace-pc-guard` under "Other C Flags". If you are using Swift, also add `-sanitize-coverage=func` and `-sanitize=undefined` under "Other Swift Flags".
 
@@ -77,7 +80,18 @@ post_install do |installer|
 end
 ```
 
-## Reference
+## 📚 Reference
 
 - [Clang 10 documentation](https://clang.llvm.org/docs/SanitizerCoverage.html#tracing-pcs)
 - [Improving App Performance with Order Files](https://medium.com/@michael.eisel/improving-app-performance-with-order-files-c7fff549907f)
+
+## ❤️ Contributed
+
+- If you **need help** or you'd like to **ask a general question**, open an issue.
+- If you **found a bug**, open an issue.
+- If you **have a feature request**, open an issue.
+- If you **want to contribute**, submit a pull request.
+
+## 👨🏻‍💻 Author
+
+yulingtianxia, yulingtianxia@gmail.com
