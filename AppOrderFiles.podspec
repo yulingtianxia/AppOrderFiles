@@ -5,12 +5,12 @@ s.summary      = 'Generating order files for Mach-O using Clang SanitizerCoverag
 s.description  = <<-DESC
 The easiest way to generate order files for Mach-O using Clang SanitizerCoverage. Improving App Performance.
 DESC
-s.homepage     = 'https://github.com/wangzhizhou/AppOrderFiles'
+s.homepage     = 'https://github.com/yulingtianxia/AppOrderFiles'
 
 s.license = { :type => 'MIT', :file => 'LICENSE' }
-s.author       = { 'wangzhizhou' => 'wangzhizhou@gmail.com' }
-s.social_media_url = 'https://twitter.com/wangzhizhou'
-s.source       = { :git => 'https://github.com/wangzhizhou/AppOrderFiles.git', :tag => s.version.to_s }
+s.author       = { 'yulingtianxia' => 'yulingtianxia@gmail.com' }
+s.social_media_url = 'https://twitter.com/yulingtianxia'
+s.source       = { :git => 'https://github.com/yulingtianxia/AppOrderFiles.git', :tag => s.version.to_s }
 
 s.source_files = 'AppOrderFilesSample/AppOrderFiles/*.{h,m}'
 s.public_header_files = 'AppOrderFilesSample/AppOrderFiles/*.h'
