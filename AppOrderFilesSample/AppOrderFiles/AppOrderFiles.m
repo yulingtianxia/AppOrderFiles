@@ -70,10 +70,12 @@ extern void AppOrderFiles(void(^completion)(NSString *orderFilePath)) {
             }
             Dl_info info = {0};
             dladdr(node->pc, &info);
-            NSString *name = @(info.dli_sname);
-            BOOL isObjc = [name hasPrefix:@"+["] || [name hasPrefix:@"-["];
-            NSString *symbolName = isObjc ? name : [@"_" stringByAppendingString:name];
-            [functions addObject:symbolName];
+            if (info.dli_sname) {
+                NSString *name = @(info.dli_sname);
+                BOOL isObjc = [name hasPrefix:@"+["] || [name hasPrefix:@"-["];
+                NSString *symbolName = isObjc ? name : [@"_" stringByAppendingString:name];
+                [functions addObject:symbolName];
+            }
         }
         if (functions.count == 0) {
             if (completion) {
