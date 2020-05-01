@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'AppOrderFiles'
-s.version      = '1.0.1'
+s.version      = '1.0.2'
 s.summary      = 'Generating order files for Mach-O using Clang SanitizerCoverages.'
 s.description  = <<-DESC
 The easiest way to generate order files for Mach-O using Clang SanitizerCoverage. Improving App Performance.

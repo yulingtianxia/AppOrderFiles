@@ -13,7 +13,6 @@
 
 static OSQueueHead queue = OS_ATOMIC_QUEUE_INIT;
 
-static BOOL collectBegan = NO;
 static BOOL collectFinished = NO;
 
 typedef struct {
@@ -41,7 +40,7 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t *start,
 // But for large functions it will emit a simple call:
 //    __sanitizer_cov_trace_pc_guard(guard);
 void __sanitizer_cov_trace_pc_guard(uint32_t *guard) {
-    if (collectFinished || (!*guard && collectBegan)) {
+    if (collectFinished || !*guard) {
         return;
     }
     // If you set *guard to 0 this code will not be called again for this edge.
