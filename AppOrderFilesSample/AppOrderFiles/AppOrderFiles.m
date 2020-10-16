@@ -25,11 +25,6 @@ typedef struct {
 // more than once with the same values of start/stop.
 void __sanitizer_cov_trace_pc_guard_init(uint32_t *start,
                                          uint32_t *stop) {
-    static uint32_t N;  // Counter for the guards.
-    if (start == stop || *start) return;  // Initialize only once.
-    printf("INIT: %p %p\n", start, stop);
-    for (uint32_t *x = start; x < stop; x++)
-        *x = ++N;  // Guards should start from 1.
 }
 
 // This callback is inserted by the compiler on every edge in the
@@ -40,7 +35,7 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t *start,
 // But for large functions it will emit a simple call:
 //    __sanitizer_cov_trace_pc_guard(guard);
 void __sanitizer_cov_trace_pc_guard(uint32_t *guard) {
-    if (collectFinished || !*guard) {
+    if (collectFinished || *guard == INT32_MAX) {
         return;
     }
     // If you set *guard to 0 this code will not be called again for this edge.
@@ -49,7 +44,7 @@ void __sanitizer_cov_trace_pc_guard(uint32_t *guard) {
     // The values of `*guard` are as you set them in
     // __sanitizer_cov_trace_pc_guard_init and so you can make them consecutive
     // and use them to dereference an array or a bit vector.
-    *guard = 0;
+    *guard = INT32_MAX;
     void *PC = __builtin_return_address(0);
     PCNode *node = malloc(sizeof(PCNode));
     *node = (PCNode){PC, NULL};
